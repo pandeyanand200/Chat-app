@@ -16,10 +16,14 @@ import { connectDB } from "./lib/db.js";
 // import messageRoutes from "./routes/message.route.js";
 import { app, server } from "./lib/socket.js";
 
+import { fileURLToPath } from "url";
+
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const PORT = process.env.PORT || 5001;
-const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
