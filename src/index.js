@@ -18,6 +18,8 @@ import { app, server } from "./lib/socket.js";
 
 import { fileURLToPath } from "url";
 
+console.log("Starting server in production mode...");
+
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
